@@ -96,11 +96,12 @@ namespace Lesson20HW
             return titleSort;
 
         }
-        public override string ToString()
+       public override string ToString()
         { string print = "";
-            foreach( Book book in books.Values )
+            foreach( KeyValuePair<string,Book> keyValuePair in books )
             {
-               print+= book.ToString()+"/n"; 
+                
+               print+= keyValuePair.Key+": "+keyValuePair.Value.ToString()+"\n";
             }
             return print;
         }
